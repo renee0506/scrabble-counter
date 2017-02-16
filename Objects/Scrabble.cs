@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 namespace ScrabbleApp.Objects
 {
@@ -46,7 +47,7 @@ namespace ScrabbleApp.Objects
         }
         else
         {
-          result = 0;
+          result += 0;
         }
 
       }
@@ -55,6 +56,8 @@ namespace ScrabbleApp.Objects
 
     public int CountDict(string inputWord)
     {
+      Regex rgx = new Regex("\\W+");
+      inputWord = rgx.Replace(inputWord, "");
       inputArray = new char[inputWord.Length];
       inputArray = inputWord.ToCharArray();
       int result = 0;

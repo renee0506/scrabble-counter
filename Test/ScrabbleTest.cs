@@ -30,7 +30,7 @@ namespace ScrabbleApp
 
 
       //Act
-      int output = obj.Count("QUIZ");
+      int output = obj.Count("QUIZ%!");
 
       //Assert
       Assert.Equal(22, output);
@@ -59,7 +59,7 @@ namespace ScrabbleApp
 
 
       //Act
-      int output = obj.CountDict("QUIZ");
+      int output = obj.CountDict("QUIZ%!");
 
       //Assert
       Assert.Equal(22, output);
