@@ -12,7 +12,7 @@ namespace ScrabbleApp.Objects
 
     public int Count(string inputWord)
     {
-      inputWord.ToUpper();
+      inputWord = inputWord.ToUpper();
       inputArray = new char[inputWord.Length];
       inputArray = inputWord.ToCharArray();
       for (int i = 0; i < inputWord.Length; i++)
@@ -56,6 +56,7 @@ namespace ScrabbleApp.Objects
 
     public int CountDict(string inputWord)
     {
+      inputWord = inputWord.ToUpper();
       Regex rgx = new Regex("\\W+");
       inputWord = rgx.Replace(inputWord, "");
       inputArray = new char[inputWord.Length];
